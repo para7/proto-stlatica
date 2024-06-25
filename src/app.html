@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		%sveltekit.head%
+
+		<!-- reset css -->
+		<link rel="stylesheet" href="https://unpkg.com/modern-css-reset/dist/reset.min.css" />
+
+		<!-- radix colors -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/gray.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/blue.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/green.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/red.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/gray-dark.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/blue-dark.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/green-dark.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@radix-ui/colors@latest/red-dark.css"
+		/>
+
+		<!-- dashvar https://dashvar.com/default/docs -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/dashvars/dashvar/dist/dashvar.css" />
+	</head>
+
+	<!-- ダークテーマの事前適用を行う -->
+	<script src="./setup.js"></script>
+
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
+</html>

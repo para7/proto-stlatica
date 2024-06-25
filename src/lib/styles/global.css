@@ -1,0 +1,17 @@
+:root {
+	background-color: var(--gray-1);
+	color: var(--gray-12);
+}
+
+.dark {
+	background-color: var(--gray-4);
+}
+
+a {
+	color: var(--blue-11);
+}
+
+html,
+body {
+	height: 100%;
+}
