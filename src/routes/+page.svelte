@@ -1,1 +1,1 @@
-<a href="profile">profile</a>
+<a href="profile/hoge">profile</a>

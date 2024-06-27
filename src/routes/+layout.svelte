@@ -1,6 +1,6 @@
 <script lang="ts">
-	import '$lib/styles/global.css';
-	import ThemeSwitch from '$lib/theme-switch.svelte';
+	import "$lib/styles/global.css";
+	import ThemeSwitch from "$lib/theme-switch.svelte";
 </script>
 
 <div class="base">

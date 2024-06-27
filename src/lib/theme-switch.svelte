@@ -1,25 +1,25 @@
 <script lang="ts">
 	let isDark: boolean | undefined = undefined;
-	import { browser } from '$app/environment';
+	import { browser } from "$app/environment";
 
 	if (browser) {
-		isDark = document.documentElement.classList.contains('dark');
+		isDark = document.documentElement.classList.contains("dark");
 	}
 
 	const onClick = () => {
-		if (document.documentElement.classList.contains('dark')) {
-			document.documentElement.classList.remove('dark');
+		if (document.documentElement.classList.contains("dark")) {
+			document.documentElement.classList.remove("dark");
 			isDark = false;
 		} else {
-			document.documentElement.classList.add('dark');
+			document.documentElement.classList.add("dark");
 			isDark = true;
 		}
-		localStorage.setItem('theme', isDark ? 'dark' : 'light');
+		localStorage.setItem("theme", isDark ? "dark" : "light");
 	};
 
 	// https://icon-sets.iconify.design/ic/?category=General
-	import Moon from 'virtual:icons/ic/outline-mode-night';
-	import Sun from 'virtual:icons/ic/outline-wb-sunny';
+	import Moon from "virtual:icons/ic/outline-mode-night";
+	import Sun from "virtual:icons/ic/outline-wb-sunny";
 </script>
 
 <button class="button" onclick={onClick}>
