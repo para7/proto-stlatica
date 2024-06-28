@@ -1,5 +1,6 @@
 <script lang="ts">
 	import "$lib/styles/global.css";
+	import "$lib/styles/utilities.css";
 	import ThemeSwitch from "$lib/theme-switch.svelte";
 </script>
 
@@ -35,6 +36,8 @@
 
 	.slot {
 		flex: 1;
+		overflow: auto;
+
 		/* background-color: red; */
 	}
 </style>

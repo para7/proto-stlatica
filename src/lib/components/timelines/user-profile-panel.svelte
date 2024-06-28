@@ -48,7 +48,7 @@
 	}
 
 	.username {
-		font-size: 1.5rem;
+		font-size: var(--font-size-6);
 		font-weight: bold;
 	}
 
@@ -69,9 +69,9 @@
 
 	.icon {
 		width: 100px;
-		padding: 3px;
-		margin: 3px;
-		background-color: black;
+		padding: 2px;
+		/* margin: 3px; */
+		background-color: var(--gray-2);
 		border-radius: 50%;
 		position: absolute;
 		top: -50px; /* Assuming width is always 100, so 100 / 2 = 50px */

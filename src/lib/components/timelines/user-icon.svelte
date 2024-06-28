@@ -11,7 +11,8 @@
 <style>
 	img {
 		width: 100%;
-		height: 100%;
+		height: auto;
 		border-radius: 50%;
+		aspect-ratio: 1;
 	}
 </style>
