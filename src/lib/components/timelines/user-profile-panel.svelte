@@ -1,8 +1,13 @@
-<script>
+<script lang="ts">
 	import FollowButton from "../button/follow-button.svelte";
 	import UserIcon from "./user-icon.svelte";
 
 	let userID = "user_id";
+	let isFollow = false;
+
+	const handleFollow = () => {
+		isFollow = !isFollow;
+	};
 
 	import LetsIconsMeatballsMenu from "~icons/lets-icons/meatballs-menu";
 </script>
@@ -17,14 +22,8 @@
 	</div>
 
 	<div class={"toolPalette"}>
+		<FollowButton {isFollow} onclick={handleFollow}></FollowButton>
 		<LetsIconsMeatballsMenu></LetsIconsMeatballsMenu>
-		<!-- <ActionIcon variant="outline" color="gray" radius="xl">
-			<TbDots />
-		</ActionIcon>
-		
-		<FollowButton isFollow={false} /> -->
-		<FollowButton isFollow></FollowButton>
-		<FollowButton isFollow={false}></FollowButton>
 	</div>
 
 	<div class={"texts"}>

@@ -48,16 +48,15 @@
 		justify-content: center;
 		align-items: center;
 		padding: var(--size-02);
+		transition: transform 0.1s;
 	}
 
 	button:hover {
 		background-color: var(--gray-4);
-		/* 0.5秒かけて色を変化させる */
 	}
 
 	button:active {
-		-webkit-transform: translateY(2px);
-		transform: translateY(2px);
+		transform: translateY(1px);
 		box-shadow: none;
 	}
 </style>

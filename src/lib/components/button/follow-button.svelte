@@ -1,25 +1,31 @@
 <script lang="ts">
+	import type { ButtonProps } from "../material/button/props";
+
 	type Props = {
 		isFollow: boolean;
+		onclick?: ButtonProps["onclick"];
 	};
 
-	let { isFollow } = $props();
+	let { isFollow, onclick }: Props = $props();
 
-	import Button from "../material/button.svelte";
+	import OutlineButton from "../material/button/outline-button.svelte";
+	import SolidButton from "../material/button/solid-button.svelte";
 </script>
 
-<div>
-	<Button>
-		{#if isFollow}
-			フォロー解除
-		{:else}
-			フォロー
-		{/if}
-	</Button>
-</div>
+<!-- <div> -->
+{#if isFollow}
+	<OutlineButton {onclick}>フォロー解除</OutlineButton>
+{:else}
+	<SolidButton {onclick}>フォロー</SolidButton>
+{/if}
+
+<!-- </div> -->
 
 <style>
-	div {
-		--font-size: 3em;
-	}
+	/* div {
+		display: inline-block;
+		width: 8em;
+		display: flex;
+		justify-content: center;
+	} */
 </style>
