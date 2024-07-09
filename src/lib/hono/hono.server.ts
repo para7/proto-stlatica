@@ -4,13 +4,18 @@ import * as v from "valibot";
 
 const router = new Hono()
 	.get("/hello", async (c) => {
-		return c.json({ message: "hello!!", method: "GET" });
+		// await new Promise((resolve) => {
+		// 	setTimeout(() => {
+		// 		resolve(0);
+		// 	}, 10000);
+		// });
+		return c.json({ message: "hello api", time: new Date(), method: "GET" });
 	})
 	.post("/hello", async (c) => {
-		return c.json({ message: "hello!!", method: "POST" });
+		return c.json({ message: "hello api", time: new Date(), method: "POST" });
 	})
 	.delete("/hello", async (c) => {
-		return c.json({ message: "hello!!", method: "DELETE" });
+		return c.json({ message: "hello api", time: new Date(), method: "DELETE" });
 	});
 
 const router2 = new Hono().post(

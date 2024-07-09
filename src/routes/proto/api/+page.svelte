@@ -1,55 +1,34 @@
 <script lang="ts">
-	import { honoClient } from "$lib/hono/hono.client";
-	import { onMount } from "svelte";
+	import { honoClient } from "$lib/hono/honoClient";
+	import type { PageData } from "./$types";
 
-	let data: unknown = null;
-	let vali: unknown = null;
+	export let data: PageData;
 
-	onMount(async () => {
-		honoClient.api.hello
-			.$get()
-			.then(async (x) => {
-				if (x.ok) {
-					data = await x.json();
-					// console.log(data);
-				}
-			})
-			.catch((e) => {
-				console.error(e);
-				data = e;
-			});
-	});
-
-	onMount(async () => {
-		await honoClient.api.validate
-			.$post({ json: { id: "id" } })
-			.then(async (x) => {
-				if (x.ok) {
-					vali = await x.json();
-					// console.log(data);
-				} else {
-					console.error(x);
-					vali = { ...x, status: x.status, json: await x.json().catch((e) => String(e)) };
-				}
-			})
-			.catch(async (e) => {
-				console.error(e);
-			});
-	});
+	let vali = honoClient.api.validate
+		.$post({ json: { id: "id" } })
+		.then(async (x) => {
+			if (x.ok) {
+				const sss = await x.json();
+				console.log(sss);
+				return sss;
+			} else {
+				console.error(x);
+				return { ...x, status: x.status, json: await x.json().catch((e) => String(e)) };
+			}
+		})
+		.catch(async (e) => {
+			console.error(e);
+		});
 </script>
 
-{#await data}
-	<p>fetching...</p>
-{:then res}
-	<div>【data】</div>
-	<div class="pre">{JSON.stringify(data, null, "\t")}</div>
-{/await}
+<div>【data】</div>
+<div class="pre">{JSON.stringify(data, null, "\t")}</div>
 
 {#await vali}
 	<p>fetching...</p>
 {:then res}
 	<div>【vali】</div>
-	<div class="pre">{JSON.stringify(vali, null, "\t")}</div>
+	<div class="pre">{JSON.stringify(res, null, "\t")}</div>
 {/await}
 
 <style>
