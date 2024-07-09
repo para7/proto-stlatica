@@ -1,15 +1,17 @@
 <script lang="ts">
+	import { honoClient } from "$lib/hono/hono.client";
 	import { onMount } from "svelte";
 
 	let data: unknown = null;
 	let vali: unknown = null;
 
 	onMount(async () => {
-		fetch("/api/hello", { method: "GET" })
+		honoClient.api.hello
+			.$get()
 			.then(async (x) => {
 				if (x.ok) {
 					data = await x.json();
-					console.log(data);
+					// console.log(data);
 				}
 			})
 			.catch((e) => {
@@ -19,17 +21,12 @@
 	});
 
 	onMount(async () => {
-		fetch("/api/validate", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json"
-			},
-			body: JSON.stringify({ id: "id" })
-		})
+		await honoClient.api.validate
+			.$post({ json: { id: "id" } })
 			.then(async (x) => {
 				if (x.ok) {
 					vali = await x.json();
-					console.log(data);
+					// console.log(data);
 				} else {
 					console.error(x);
 					vali = { ...x, status: x.status, json: await x.json().catch((e) => String(e)) };
