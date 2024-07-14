@@ -43,5 +43,8 @@
 		"@hono/valibot-validator": "^0.3.0",
 		"hono": "^4.4.12",
 		"valibot": "^0.36.0"
+	},
+	"volta": {
+		"node": "20.15.1"
 	}
 }
