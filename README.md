@@ -1,4 +1,4 @@
-# Stlatica (alternative)
+# Stlatica (prototype)
 
 https://github.com/stlatica/stlatica の進みが遅いので個人開発でちゃっちゃと作ってみるプロジェクト
 
