@@ -1,5 +1,5 @@
 <script>
-	import Plat from "$lib/components/timelines/plat.svelte";
+	// import Plat from "$lib/components/timelines/plat.svelte";
 	import Timeline from "$lib/components/timelines/timeline.svelte";
 	import UserProfilePanel from "$lib/components/timelines/user-profile-panel.svelte";
 </script>

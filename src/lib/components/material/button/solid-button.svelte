@@ -4,10 +4,10 @@
 
 	type Props = ButtonProps;
 
-	let { children, onclick }: Props = $props();
+	let { children, onclick, ...others }: Props = $props();
 </script>
 
-<button class="button-base" {onclick}>
+<button class="button-base" {onclick} {...others}>
 	{@render children?.()}
 </button>
 
