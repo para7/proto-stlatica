@@ -1,4 +1,4 @@
-# Stlatica (alternative)
+# Stlatica (prototype)
 
 https://github.com/stlatica/stlatica の進みが遅いので個人開発でちゃっちゃと作ってみるプロジェクト
 
@@ -12,7 +12,7 @@ make dev
 
 ## dev env
 
-- git bash ※1 
+- git bash ※1
 - make
 - nodejs (volta, corepack)
 
