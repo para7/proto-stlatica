@@ -40,11 +40,11 @@
 			<p class="line">
 				<label class="textlabel" for="id"> ID </label>
 				<!-- <input id="id" name="id" /> -->
-				<Textfield id="id" name="id"></Textfield>
+				<Textfield id="id" name="id" value="hoge"></Textfield>
 			</p>
 			<p class="line">
-				<label class="textlabel" for="pass"> Password </label>
-				<Textfield id="pass" name="pass" type="password" />
+				<label class="textlabel" for="password"> Password </label>
+				<Textfield id="password" name="password" type="password" value="huga" />
 			</p>
 			<!-- <SolidButton type="submit">Login</SolidButton> -->
 			<OutlineButton type="submit">

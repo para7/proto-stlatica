@@ -16,7 +16,7 @@
 			<UserIcon src="https://via.placeholder.com/100/b7794a/fff.webp"></UserIcon>
 		</div>
 
-		<div class="u-flex-v">
+		<div class="ut-flex-v">
 			<div class="username">{username}</div>
 			<div class="userid">@{userid}</div>
 		</div>
