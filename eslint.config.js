@@ -35,5 +35,8 @@ export default [
 	},
 	{
 		ignores: ["build/", ".svelte-kit/", "dist/"]
+	},
+	{
+		ignores: ["src/lib/routes/ROUTES.ts"]
 	}
 ];

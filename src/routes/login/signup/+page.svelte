@@ -3,6 +3,8 @@
 	import { applyAction, enhance } from "$app/forms";
 
 	import type { ActionData } from "./$types";
+	import { PAGES } from "$lib/routes/ROUTES";
+	import Textfield from "$lib/components/form/input/textfield.svelte";
 	export let form: ActionData;
 
 	let loading = false;
@@ -31,16 +33,11 @@
 		<div class="container">
 			<p class="line">
 				<label class="textlabel" for="id"> ID (email) </label>
-				<input id="id" name="id" />
+				<Textfield id="id" name="id" />
 			</p>
 			<p class="line">
 				<label class="textlabel" for="pass"> Password </label>
-				<input id="pass" name="pass" type="password" />
-			</p>
-
-			<p class="notice">
-				本プロダクトは試作版です。<br />
-				予告なくデータ削除・サービス停止する場合がございます。<br />あらかじめご了承ください。
+				<Textfield id="pass" name="pass" type="password" />
 			</p>
 
 			<!-- <SolidButton type="submit">Login</SolidButton> -->
@@ -55,8 +52,13 @@
 	</form>
 
 	<div>
-		<a href="/login">login</a>
+		<a href={PAGES["/login"]}>login</a>
 	</div>
+
+	<p class="notice">
+		本プロジェクトは試作版です。<br />
+		予告なくデータ削除・サービス停止する場合がございます。<br />あらかじめご了承ください。
+	</p>
 </div>
 
 <style>

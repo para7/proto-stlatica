@@ -4,6 +4,7 @@
 	import { applyAction, enhance } from "$app/forms";
 
 	import type { ActionData } from "./$types";
+	import Textfield from "$lib/components/form/input/textfield.svelte";
 	export let form: ActionData;
 
 	let loading = false;
@@ -38,11 +39,12 @@
 		<div class="container">
 			<p class="line">
 				<label class="textlabel" for="id"> ID </label>
-				<input id="id" name="id" />
+				<!-- <input id="id" name="id" /> -->
+				<Textfield id="id" name="id"></Textfield>
 			</p>
 			<p class="line">
 				<label class="textlabel" for="pass"> Password </label>
-				<input id="pass" name="pass" type="password" />
+				<Textfield id="pass" name="pass" type="password" />
 			</p>
 			<!-- <SolidButton type="submit">Login</SolidButton> -->
 			<OutlineButton type="submit">
@@ -56,7 +58,7 @@
 	</form>
 
 	<div>
-		<a href="/signup">signup</a>
+		<a href="/login/signup">signup</a>
 	</div>
 </div>
 
