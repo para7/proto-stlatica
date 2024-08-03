@@ -3,7 +3,7 @@
 	import "$lib/styles/theme.css";
 	import "$lib/styles/global.css";
 	import "$lib/styles/utilities.css";
-	import ThemeSwitch from "$lib/theme-switch.svelte";
+	// import ThemeSwitch from "$lib/theme-switch.svelte";
 </script>
 
 <div class="base">
@@ -24,17 +24,17 @@
 		flex-direction: row;
 	}
 
-	.toolbar {
+	/* .toolbar {
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: column;
 
-		padding: var(--size-02);
+		padding: var(--size-02); */
 
-		/* 右側だけボーダーを表示 */
-		border-right: 1px solid var(--gray-8);
+	/* 右側だけボーダーを表示 */
+	/* border-right: 1px solid var(--gray-8);
 		height: 100%;
-	}
+	} */
 
 	.slot {
 		flex: 1;
