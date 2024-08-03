@@ -1,6 +1,6 @@
 :root {
-	background-color: var(--gray-1);
-	color: var(--gray-12);
+	background-color: var(--st-color-bg);
+	color: var(--st-color-text);
 
 	font-family: "Noto Sans JP", sans-serif;
 	font-weight: 400;
@@ -11,7 +11,7 @@
 }
 
 .dark {
-	background-color: var(--gray-4);
+	--st-color-bg: var(--gray-4);
 }
 
 a {

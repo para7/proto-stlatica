@@ -1,13 +1,15 @@
 <script lang="ts">
+	import "$lib/styles/tw-variables/_index.css";
+	import "$lib/styles/theme.css";
 	import "$lib/styles/global.css";
 	import "$lib/styles/utilities.css";
 	import ThemeSwitch from "$lib/theme-switch.svelte";
 </script>
 
 <div class="base">
-	<div class="toolbar">
+	<!-- <div class="toolbar">
 		<ThemeSwitch></ThemeSwitch>
-	</div>
+	</div> -->
 	<div class="slot">
 		<slot></slot>
 	</div>

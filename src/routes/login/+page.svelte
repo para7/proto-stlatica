@@ -19,7 +19,6 @@
 	<form
 		method="post"
 		use:enhance={(/*{ action, cancel, controller, formData, formElement, submitter }*/) => {
-			// cancel();
 			loading = true;
 
 			return async ({ result /*, update */ }) => {

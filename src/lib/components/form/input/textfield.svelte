@@ -7,7 +7,7 @@
 
 	let props: Props = $props();
 
-	console.log({ ...props });
+	// console.log({ ...props });
 </script>
 
 <input {...props} />

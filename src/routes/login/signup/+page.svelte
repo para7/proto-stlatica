@@ -7,22 +7,22 @@
 	import Textfield from "$lib/components/form/input/textfield.svelte";
 	export let form: ActionData;
 
-	let loading = false;
-
 	$: console.log(form);
+
+	let loading = false;
 </script>
 
 <div class="container">
 	<h1>Proto Stlatica</h1>
 	<h2>Signup</h2>
 
+	<!-- /api/auth/sinup に post する form -->
 	<form
 		method="post"
 		use:enhance={(/*{ action, cancel, controller, formData, formElement, submitter }*/) => {
-			// cancel();
 			loading = true;
 
-			return async ({ result }) => {
+			return async ({ result /*, update */ }) => {
 				loading = false;
 				console.log(result);
 
@@ -33,11 +33,17 @@
 		<div class="container">
 			<p class="line">
 				<label class="textlabel" for="id"> ID (email) </label>
-				<Textfield id="id" name="id" />
+				<Textfield value="hoge" id="id" name="id" />
 			</p>
+
 			<p class="line">
-				<label class="textlabel" for="pass"> Password </label>
-				<Textfield id="pass" name="pass" type="password" />
+				<label class="textlabel" for="password"> Password </label>
+				<Textfield value="hoge" id="password" name="password" type="password" />
+			</p>
+
+			<p class="line">
+				<label class="textlabel" for="invite"> Invite Code </label>
+				<Textfield value="hoge" id="invite" name="invite_code" type="password" />
 			</p>
 
 			<!-- <SolidButton type="submit">Login</SolidButton> -->
@@ -55,6 +61,12 @@
 		<a href={PAGES["/login"]}>login</a>
 	</div>
 
+	{#if form !== null}
+		<div class="red">
+			{form.message}
+		</div>
+	{/if}
+
 	<p class="notice">
 		本プロジェクトは試作版です。<br />
 		予告なくデータ削除・サービス停止する場合がございます。<br />あらかじめご了承ください。
@@ -64,6 +76,10 @@
 <style>
 	h1 {
 		text-align: center;
+	}
+
+	.red {
+		color: var(--st-color-text-red);
 	}
 
 	label {
