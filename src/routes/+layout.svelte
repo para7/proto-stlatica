@@ -3,7 +3,19 @@
 	import "$lib/styles/theme.css";
 	import "$lib/styles/global.css";
 	import "$lib/styles/utilities.css";
+	import { supabase } from "$lib/supabase/supabase-client";
 	// import ThemeSwitch from "$lib/theme-switch.svelte";
+
+	supabase.auth.onAuthStateChange((event, session) => {
+		console.log(event, session);
+	});
+
+	supabase.auth
+		.getSession()
+		.then((session) => {
+			console.log(session);
+		})
+		.catch((e) => console.error(e));
 </script>
 
 <div class="base">

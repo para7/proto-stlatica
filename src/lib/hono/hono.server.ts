@@ -1,6 +1,5 @@
 import { Hono } from "hono";
 import { vValidator } from "@hono/valibot-validator";
-import authRouter from "./auth/auth";
 import * as v from "valibot";
 
 const router = new Hono()
@@ -41,6 +40,5 @@ const baseEndpoint = "/api";
 export const honoApp = new Hono({ strict: false })
 	.route(baseEndpoint, router)
 	.route(baseEndpoint, router2);
-// .route(baseEndpoint, authRouter)
 
 export type AppType = typeof honoApp;

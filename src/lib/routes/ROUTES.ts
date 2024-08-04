@@ -21,25 +21,12 @@ export const PAGES = {
 /**
  * SERVERS
  */
-export const SERVERS = {
-	"GET /api/[...paths]": (params: { paths: (string | number)[] }) => {
-		return `/api/${params.paths?.join("/")}`;
-	},
-	"POST /api/[...paths]": (params: { paths: (string | number)[] }) => {
-		return `/api/${params.paths?.join("/")}`;
-	},
-	"PUT /api/[...paths]": (params: { paths: (string | number)[] }) => {
-		return `/api/${params.paths?.join("/")}`;
-	}
-};
+export const SERVERS = {};
 
 /**
  * ACTIONS
  */
-export const ACTIONS = {
-	"default /login": `/login`,
-	"default /login/signup": `/login/signup`
-};
+export const ACTIONS = {};
 
 /**
  * LINKS
@@ -121,12 +108,8 @@ export type KIT_ROUTES = {
 		"/profile/[userid]": "userid";
 		"/proto/api": never;
 	};
-	SERVERS: {
-		"GET /api/[...paths]": "paths";
-		"POST /api/[...paths]": "paths";
-		"PUT /api/[...paths]": "paths";
-	};
-	ACTIONS: { "default /login": never; "default /login/signup": never };
+	SERVERS: Record<string, never>;
+	ACTIONS: Record<string, never>;
 	LINKS: Record<string, never>;
-	Params: { userid: never; paths: never };
+	Params: { userid: never };
 };
