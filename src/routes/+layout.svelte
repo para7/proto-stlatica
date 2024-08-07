@@ -1,13 +1,27 @@
 <script lang="ts">
+	import "$lib/styles/tw-variables/_index.css";
+	import "$lib/styles/theme.css";
 	import "$lib/styles/global.css";
 	import "$lib/styles/utilities.css";
-	import ThemeSwitch from "$lib/theme-switch.svelte";
+	import { supabase } from "$lib/supabase/supabase-client";
+	// import ThemeSwitch from "$lib/theme-switch.svelte";
+
+	supabase.auth.onAuthStateChange((event, session) => {
+		console.log(event, session);
+	});
+
+	supabase.auth
+		.getSession()
+		.then((session) => {
+			console.log(session);
+		})
+		.catch((e) => console.error(e));
 </script>
 
 <div class="base">
-	<div class="toolbar">
+	<!-- <div class="toolbar">
 		<ThemeSwitch></ThemeSwitch>
-	</div>
+	</div> -->
 	<div class="slot">
 		<slot></slot>
 	</div>
@@ -22,17 +36,17 @@
 		flex-direction: row;
 	}
 
-	.toolbar {
+	/* .toolbar {
 		display: flex;
 		justify-content: flex-end;
 		flex-direction: column;
 
-		padding: var(--size-02);
+		padding: var(--size-02); */
 
-		/* 右側だけボーダーを表示 */
-		border-right: 1px solid var(--gray-8);
+	/* 右側だけボーダーを表示 */
+	/* border-right: 1px solid var(--gray-8);
 		height: 100%;
-	}
+	} */
 
 	.slot {
 		flex: 1;

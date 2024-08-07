@@ -35,6 +35,10 @@ const router2 = new Hono().post(
 
 // export const app = new Hono().route("/api", router);
 
-export const honoApp = new Hono({ strict: false }).route("/api", router).route("/api", router2);
+const baseEndpoint = "/api";
+
+export const honoApp = new Hono({ strict: false })
+	.route(baseEndpoint, router)
+	.route(baseEndpoint, router2);
 
 export type AppType = typeof honoApp;

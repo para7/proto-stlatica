@@ -28,6 +28,15 @@ export default [
 		}
 	},
 	{
+		files: ["**/*.svelte", "**/*.ts"],
+		rules: {
+			"@typescript-eslint/no-unused-vars": "warn"
+		}
+	},
+	{
 		ignores: ["build/", ".svelte-kit/", "dist/"]
+	},
+	{
+		ignores: ["src/lib/routes/ROUTES.ts"]
 	}
 ];

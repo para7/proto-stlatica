@@ -16,13 +16,18 @@ build: node_modules ## run build
 	pnpm run build
 
 preview: node_modules ## preview builded files
-	pnpm run test:unit
-	pnpm run test:integration
+	pnpm run preview
+
+check: lint ci/test build ## run all checks
+
+# preview: node_modules ## preview builded files
+# 	pnpm run test:unit
+# 	pnpm run test:integration
 
 # << ci commands >>
 
-ci/test: node_modules ## run vitest
-	pnpm run test
+ci/test: node_modules ## run vitest once
+	pnpm run test:ci
 
 # << utility commands >>
 

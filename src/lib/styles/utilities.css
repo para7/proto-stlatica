@@ -1,11 +1,11 @@
 /* flex horizontal */
-.u-flex-h {
+.ut-flex-h {
 	display: flex;
 	flex-direction: row;
 }
 
 /* flex vertical */
-.u-flex-v {
+.ut-flex-v {
 	display: flex;
 	flex-direction: column;
 }

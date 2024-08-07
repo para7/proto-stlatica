@@ -12,7 +12,7 @@ make dev
 
 ## dev env
 
-- git bash ※1 
+- git bash ※1
 - make
 - nodejs (volta, corepack)
 

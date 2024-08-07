@@ -1,22 +1,19 @@
 <script lang="ts">
-	import type { ButtonProps } from "../material/button/props";
+	import Button from "$lib/components/material/button/button.svelte";
 
 	type Props = {
 		isFollow: boolean;
-		onclick?: ButtonProps["onclick"];
+		onclick: () => Promise<void>;
 	};
 
-	let { isFollow, onclick }: Props = $props();
-
-	import OutlineButton from "../material/button/outline-button.svelte";
-	import SolidButton from "../material/button/solid-button.svelte";
+	let { isFollow, ...others }: Props = $props();
 </script>
 
 <!-- <div> -->
 {#if isFollow}
-	<OutlineButton {onclick}>フォロー解除</OutlineButton>
+	<Button type="button" variant="outlined" {...others}>フォロー解除</Button>
 {:else}
-	<SolidButton {onclick}>フォロー</SolidButton>
+	<Button type="button" variant="contained" {...others}>フォロー</Button>
 {/if}
 
 <!-- </div> -->
