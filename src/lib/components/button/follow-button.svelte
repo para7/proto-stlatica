@@ -9,7 +9,6 @@
 	let { isFollow, ...others }: Props = $props();
 </script>
 
-<!-- <div> -->
 {#if isFollow}
 	<Button type="button" variant="outlined" {...others}>フォロー解除</Button>
 {:else}

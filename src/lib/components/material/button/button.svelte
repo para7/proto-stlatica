@@ -8,6 +8,10 @@
 	console.log(fullwidth);
 	const classNames = [fullwidth ? "fullwidth" : "", variant].join(" ");
 	console.log(classNames);
+
+	$effect(() => {
+		console.log(variant);
+	});
 </script>
 
 <button class={`button-base ${classNames}`} {onclick} {...others}>
@@ -60,7 +64,7 @@
 		color: hsl(0, 0%, 95%);
 		background-color: var(--blue-10);
 	}
-	.button-base:active {
+	.contained:active {
 		background-color: var(--blue-11);
 	}
 </style>

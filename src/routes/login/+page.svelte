@@ -45,7 +45,10 @@
 				return;
 			}
 
-			goto(PAGES["/profile/[userid]"]({ userid: values.id }));
+			// goto hack
+			setTimeout(() => {
+				goto(PAGES["/profile/[userid]"]({ userid: values.id }));
+			}, 0);
 		} catch (e) {
 			message = String(e);
 		} finally {
