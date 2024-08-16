@@ -1,0 +1,55 @@
+{
+	"name": "sns-proto-svelte",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"test": "vitest --ui",
+		"test:ci": "vitest run",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"lint": "eslint --fix --ignore-pattern .gitignore --cache --cache-location ./node_modules/.cache/eslint/ --cache-strategy content  .",
+		"format:check": "prettier --check .",
+		"format": "prettier --write .",
+		"test:integration": "playwright test",
+		"test:unit": "vitest run"
+	},
+	"devDependencies": {
+		"@iconify/json": "^2.2.233",
+		"@playwright/test": "^1.45.3",
+		"@sveltejs/adapter-auto": "^3.2.2",
+		"@sveltejs/kit": "^2.5.20",
+		"@sveltejs/vite-plugin-svelte": "^3.1.1",
+		"@types/eslint": "^8.56.11",
+		"@vitest/ui": "^1.6.0",
+		"eslint": "^9.8.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-svelte": "^2.43.0",
+		"globals": "^15.9.0",
+		"prettier": "^3.3.3",
+		"prettier-plugin-svelte": "^3.2.6",
+		"svelte": "5.0.0-next.208",
+		"svelte-check": "^3.8.5",
+		"tslib": "^2.6.3",
+		"typescript": "^5.5.4",
+		"typescript-eslint": "8.0.0-alpha.34",
+		"unplugin-icons": "^0.19.1",
+		"vite": "^5.3.5",
+		"vite-plugin-kit-routes": "^0.6.5",
+		"vitest": "^1.6.0"
+	},
+	"type": "module",
+	"packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903",
+	"dependencies": {
+		"@hono/valibot-validator": "^0.3.0",
+		"@radix-ui/colors": "^3.0.0",
+		"@supabase/supabase-js": "^2.45.0",
+		"hono": "^4.5.3",
+		"valibot": "^0.36.0"
+	},
+	"volta": {
+		"node": "20.15.1"
+	}
+}
