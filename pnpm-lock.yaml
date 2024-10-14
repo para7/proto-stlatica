@@ -9,86 +9,86 @@ importers:
   .:
     dependencies:
       '@hono/valibot-validator':
-        specifier: ^0.3.0
+        specifier: 0.3.0
         version: 0.3.0(hono@4.5.3)(valibot@0.36.0)
       '@radix-ui/colors':
-        specifier: ^3.0.0
+        specifier: 3.0.0
         version: 3.0.0
       '@supabase/supabase-js':
-        specifier: ^2.45.0
+        specifier: 2.45.0
         version: 2.45.0
       hono:
-        specifier: ^4.5.3
+        specifier: 4.5.3
         version: 4.5.3
       valibot:
-        specifier: ^0.36.0
+        specifier: 0.36.0
         version: 0.36.0
     devDependencies:
       '@iconify/json':
-        specifier: ^2.2.233
+        specifier: 2.2.233
         version: 2.2.233
       '@playwright/test':
-        specifier: ^1.45.3
+        specifier: 1.45.3
         version: 1.45.3
       '@sveltejs/adapter-auto':
-        specifier: ^3.2.2
+        specifier: 3.2.2
         version: 3.2.2(@sveltejs/kit@2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5(@types/node@22.1.0)))(svelte@5.0.0-next.208)(vite@5.3.5(@types/node@22.1.0)))
       '@sveltejs/kit':
-        specifier: ^2.5.20
+        specifier: 2.5.20
         version: 2.5.20(@sveltejs/vite-plugin-svelte@3.1.1(svelte@5.0.0-next.208)(vite@5.3.5(@types/node@22.1.0)))(svelte@5.0.0-next.208)(vite@5.3.5(@types/node@22.1.0))
       '@sveltejs/vite-plugin-svelte':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1(svelte@5.0.0-next.208)(vite@5.3.5(@types/node@22.1.0))
       '@types/eslint':
-        specifier: ^8.56.11
+        specifier: 8.56.11
         version: 8.56.11
       '@vitest/ui':
-        specifier: ^1.6.0
+        specifier: 1.6.0
         version: 1.6.0(vitest@1.6.0)
       eslint:
-        specifier: ^9.8.0
+        specifier: 9.8.0
         version: 9.8.0
       eslint-config-prettier:
-        specifier: ^9.1.0
+        specifier: 9.1.0
         version: 9.1.0(eslint@9.8.0)
       eslint-plugin-svelte:
-        specifier: ^2.43.0
+        specifier: 2.43.0
         version: 2.43.0(eslint@9.8.0)(svelte@5.0.0-next.208)
       globals:
-        specifier: ^15.9.0
+        specifier: 15.9.0
         version: 15.9.0
       prettier:
-        specifier: ^3.3.3
+        specifier: 3.3.3
         version: 3.3.3
       prettier-plugin-svelte:
-        specifier: ^3.2.6
+        specifier: 3.2.6
         version: 3.2.6(prettier@3.3.3)(svelte@5.0.0-next.208)
       svelte:
         specifier: 5.0.0-next.208
         version: 5.0.0-next.208
       svelte-check:
-        specifier: ^3.8.5
+        specifier: 3.8.5
         version: 3.8.5(postcss-load-config@3.1.4(postcss@8.4.40))(postcss@8.4.40)(svelte@5.0.0-next.208)
       tslib:
-        specifier: ^2.6.3
+        specifier: 2.6.3
         version: 2.6.3
       typescript:
-        specifier: ^5.5.4
+        specifier: 5.5.4
         version: 5.5.4
       typescript-eslint:
         specifier: 8.0.0-alpha.34
         version: 8.0.0-alpha.34(eslint@9.8.0)(typescript@5.5.4)
       unplugin-icons:
-        specifier: ^0.19.1
+        specifier: 0.19.1
         version: 0.19.1
       vite:
-        specifier: ^5.3.5
+        specifier: 5.3.5
         version: 5.3.5(@types/node@22.1.0)
       vite-plugin-kit-routes:
-        specifier: ^0.6.5
+        specifier: 0.6.5
         version: 0.6.5
       vitest:
-        specifier: ^1.6.0
+        specifier: 1.6.0
         version: 1.6.0(@types/node@22.1.0)(@vitest/ui@1.6.0)
 
 packages:
